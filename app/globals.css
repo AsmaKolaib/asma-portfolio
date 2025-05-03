@@ -1,15 +1,23 @@
 @import "tailwindcss";
 
+
+ 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+@font-face {
+  font-family: 'Robuka';
+  src: url('/fonts/RobukaDemo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-robuka: var(--myfont);
+ 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +28,14 @@
 }
 
 body {
-  background: var(--background);
+  background-image: url('/images/noise.png'),url('/images/background-m\ 1.png'); 
+  background-position: left top, right top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-color:var(--background);
+
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Poppins, Helvetica, sans-serif;
 }
+
+
