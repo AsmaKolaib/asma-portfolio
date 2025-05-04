@@ -16,7 +16,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-robuka: var(--myfont);
+  --font-robuka: var(--font-robuka);
+  --font-poppins: var(--font-poppins);
+
  
 }
 
@@ -28,14 +30,12 @@
 }
 
 body {
-  background-image: url('/images/noise.png'),url('/images/background-m\ 1.png'); 
+  /* background-image: url('/images/noise.png'),url('/images/background-m\ 1.png'); 
   background-position: left top, right top;
   background-repeat: no-repeat, no-repeat;
-  background-size: cover, cover;
-  background-color:var(--background);
-
+  background-size: cover, cover;*/
+  background-color:var(--foreground); 
   color: var(--foreground);
-  font-family: Poppins, Helvetica, sans-serif;
-}
+  font-family: var(--font-poppins), Helvetica, sans-serif;}
 
 
