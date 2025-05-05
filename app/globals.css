@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --button: #B803B9;
 }
 @font-face {
   font-family: 'Robuka';
@@ -16,6 +17,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-button: var(--button);
   --font-robuka: var(--font-robuka);
   --font-poppins: var(--font-poppins);
 

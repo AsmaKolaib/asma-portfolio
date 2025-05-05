@@ -8,8 +8,12 @@ function Home() {
 
     <>
 
-{/* <Header/> */}
-<Hero/>
+
+{/* <Header/>
+<Hero/> */}
+
+
+
     </>
 
   );

@@ -1,15 +1,29 @@
-import React from 'react'
-
- const Header = () => {
+'use client'
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+const Header = () => {
   return (
-    <div className=' container mx-auto grid grid-cols-2 justify-between items-center p-8 '>
-        <h1 className=' font-robuka text-5xl lg:text-7xl '> AK</h1>
-        <ul className=' flex flex-row justify-end gap-8 text-2 '> 
+    <motion.div 
+    initial={{ opacity: 0, y: -30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 1.5, duration: 0.6, ease: 'easeOut' }}
+    className="absolute z-50 top-0 left-0 w-full bg-transparent">
+      <div className="container mx-auto flex justify-between items-center p-8">
+        <h1 className="font-robuka text-5xl lg:text-4xl">AK</h1>
+        <ul className="flex gap-8 text-2xl">
+          <Link href="#about">
             <li>About</li>
-            <li>Projects</li> 
-            <li>Connect </li>
+          </Link>
+          <Link href="#projects">
+            <li>Projects</li>
+          </Link>
+          <Link href="#connect">
+            <li>Connect</li>
+          </Link>
         </ul>
-    </div>
-  )
-}
-export default Header
+      </div>
+    </motion.div >
+  );
+};
+
+export default Header;
