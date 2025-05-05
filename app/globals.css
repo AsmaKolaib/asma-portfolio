@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-
- 
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -36,7 +34,7 @@ body {
   background-position: left top, right top;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;*/
-  background-color:var(--foreground); 
+  background-color:#191919; 
   color: var(--foreground);
   font-family: var(--font-poppins), Helvetica, sans-serif;}
 
