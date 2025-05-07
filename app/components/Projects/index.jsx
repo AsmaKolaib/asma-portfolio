@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Project from "./project.jsx";
-import { motion } from 'framer-motion';
-
-
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
@@ -35,137 +33,135 @@ const Projects = () => {
             </p>
           </div>
 
-          <div className="h-full flex items-end justify-end pr-4 pb-10">
-          <div className="h-full flex items-end justify-end pr-4 pb-10">
-          <svg
-            width="211"
-            height="144"
-            viewBox="0 0 211 144"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {/* SVG lines... */}
-            <line
-              x1="104.221"
-              y1="2.35448"
-              x2="208.714"
-              y2="72.0166"
-              stroke="white"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-            <line
-              x1="104.221"
-              y1="2.35448"
-              x2="208.714"
-              y2="72.0166"
-              stroke="#A3A3A3"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-            <line
-              x1="1.5"
-              y1="-1.5"
-              x2="127.085"
-              y2="-1.5"
-              transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 102.141 141.807)"
-              stroke="white"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-            <line
-              x1="1.5"
-              y1="-1.5"
-              x2="127.085"
-              y2="-1.5"
-              transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 102.141 141.807)"
-              stroke="#A3A3A3"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-            <line
-              x1="56.3497"
-              y1="2.35448"
-              x2="160.843"
-              y2="72.0166"
-              stroke="white"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-            <line
-              x1="56.3497"
-              y1="2.35448"
-              x2="160.843"
-              y2="72.0166"
-              stroke="#A3A3A3"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-            <line
-              x1="1.5"
-              y1="-1.5"
-              x2="127.085"
-              y2="-1.5"
-              transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 54.2695 141.807)"
-              stroke="white"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-            <line
-              x1="1.5"
-              y1="-1.5"
-              x2="127.085"
-              y2="-1.5"
-              transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 54.2695 141.807)"
-              stroke="#A3A3A3"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-            <line
-              x1="2.85454"
-              y1="2.35546"
-              x2="107.348"
-              y2="72.0175"
-              stroke="white"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-            <line
-              x1="2.85454"
-              y1="2.35546"
-              x2="107.348"
-              y2="72.0175"
-              stroke="#A3A3A3"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-            <line
-              x1="1.5"
-              y1="-1.5"
-              x2="127.085"
-              y2="-1.5"
-              transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 0.774414 141.808)"
-              stroke="white"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-            <line
-              x1="1.5"
-              y1="-1.5"
-              x2="127.085"
-              y2="-1.5"
-              transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 0.774414 141.808)"
-              stroke="#A3A3A3"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-          </svg>
-        </div>
+          <div className="h-full flex items-end justify-end  pb-20 pr-20">
+            <svg
+              width="211"
+              height="144"
+              viewBox="0 0 211 144"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* SVG lines... */}
+              <line
+                x1="104.221"
+                y1="2.35448"
+                x2="208.714"
+                y2="72.0166"
+                stroke="white"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+              <line
+                x1="104.221"
+                y1="2.35448"
+                x2="208.714"
+                y2="72.0166"
+                stroke="#A3A3A3"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+              <line
+                x1="1.5"
+                y1="-1.5"
+                x2="127.085"
+                y2="-1.5"
+                transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 102.141 141.807)"
+                stroke="white"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+              <line
+                x1="1.5"
+                y1="-1.5"
+                x2="127.085"
+                y2="-1.5"
+                transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 102.141 141.807)"
+                stroke="#A3A3A3"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+              <line
+                x1="56.3497"
+                y1="2.35448"
+                x2="160.843"
+                y2="72.0166"
+                stroke="white"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+              <line
+                x1="56.3497"
+                y1="2.35448"
+                x2="160.843"
+                y2="72.0166"
+                stroke="#A3A3A3"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+              <line
+                x1="1.5"
+                y1="-1.5"
+                x2="127.085"
+                y2="-1.5"
+                transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 54.2695 141.807)"
+                stroke="white"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+              <line
+                x1="1.5"
+                y1="-1.5"
+                x2="127.085"
+                y2="-1.5"
+                transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 54.2695 141.807)"
+                stroke="#A3A3A3"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+              <line
+                x1="2.85454"
+                y1="2.35546"
+                x2="107.348"
+                y2="72.0175"
+                stroke="white"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+              <line
+                x1="2.85454"
+                y1="2.35546"
+                x2="107.348"
+                y2="72.0175"
+                stroke="#A3A3A3"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+              <line
+                x1="1.5"
+                y1="-1.5"
+                x2="127.085"
+                y2="-1.5"
+                transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 0.774414 141.808)"
+                stroke="white"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+              <line
+                x1="1.5"
+                y1="-1.5"
+                x2="127.085"
+                y2="-1.5"
+                transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 0.774414 141.808)"
+                stroke="#A3A3A3"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+            </svg>
           </div>
         </div>
 
         {/* Slide 2: Project 1 */}
-        <div className="min-w-full h-screen flex items-center justify-center p-8">
+        <div className="min-w-full h-screen flex items-center justify-center p-8 ml-[-90px]">
           <Project
             name="EXAMPLE 1"
             description="Description of the first project..."

@@ -9,7 +9,7 @@ const project = ({ name, shortSummary, description, tyoe, year }) => {
           alt="img"
           width={100}
           height={100}
-          className=" rounded-r-2xl rounded-b-2xl h-screen w-full object-center"
+          className=" rounded-r-2xl rounded-b-2xl h-[90vh] w-full object-center"
         />
       </div>
       <div className=" flex flex-col  justify-around p-20">
