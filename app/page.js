@@ -11,16 +11,13 @@ function Home() {
     <>
       <Header />
       <Hero />
-
-      <div className="sticky-section  projects">
+      <div id="projects" className="">
         <Projects />
       </div>
-
-      <div className=" relative about">
+      <div id="about" className=" relative ">
         <About />
       </div>
-      <div className="sticky-section connect">
-        {" "}
+      <div id="connect" className=" ">
         <Connect />
       </div>
     </>

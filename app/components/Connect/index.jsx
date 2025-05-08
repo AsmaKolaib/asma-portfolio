@@ -5,7 +5,7 @@ import Button from "../Button";
 const Connect = () => {
   return (
 
-      <div className="relative w-full h-screen flex items-center justify-center bg-gray-900">
+      <div className="relative w-full h-screen flex items-center justify-center bg-black  ">
       <motion.div
         className="absolute w-[300px] h-[300px] rounded-full"
         initial={{ x: -50 }}
@@ -13,7 +13,7 @@ const Connect = () => {
           x: [0, 150, -150, 0],
         }}
         transition={{
-          duration: 12,
+          duration: 5,
           repeat: Infinity,
           ease: "easeInOut",
         }}
@@ -33,7 +33,7 @@ const Connect = () => {
           x: [0, 120, -120, 0],
         }}
         transition={{
-          duration: 18,
+          duration: 7,
           repeat: Infinity,
           ease: "easeInOut",
         }}
@@ -166,74 +166,3 @@ const Connect = () => {
 export default Connect;
 
 
-
-// import React from "react";
-// import { motion } from "framer-motion";
-
-// const GradientShapes = () => {
-//   return (
-//     <div className="relative w-full h-screen flex items-center justify-center bg-gray-900">
-//       {/* First Shape: Circle */}
-//       <motion.div
-//         className="absolute w-[300px] h-[300px] rounded-full"
-//         initial={{ x: -50 }}
-//         animate={{
-//           x: [0, 150, -150, 0],
-//         }}
-//         transition={{
-//           duration: 12,
-//           repeat: Infinity,
-//           ease: "easeInOut",
-//         }}
-//         style={{
-//           background: "linear-gradient(135deg, #E24FE3, #B803B9)",
-//           backgroundSize: "200% 200%",
-//           filter: "blur(40px)",
-//           opacity: 0.8,
-//         }}
-//       />
-      
-//       {/* Second Shape: Ellipse */}
-//       <motion.div
-//         className="absolute w-[400px] h-[250px] rounded-[50%]"
-//         initial={{ x: 50 }}
-//         animate={{
-//           x: [0, 120, -120, 0],
-//         }}
-//         transition={{
-//           duration: 18,
-//           repeat: Infinity,
-//           ease: "easeInOut",
-//         }}
-//         style={{
-//           background: "linear-gradient(135deg, #301036, #B803B9)",
-//           backgroundSize: "200% 200%",
-//           filter: "blur(60px)",
-//           opacity: 0.8,
-//         }}
-//       />
-      
-//       {/* Third Shape: Irregular Shape */}
-//       {/* <motion.div
-//         className="absolute w-[350px] h-[350px] rounded-[40% 60% 70% 30%]"
-//         initial={{ x: -100 }}
-//         animate={{
-//           x: [0, 180, -180, 0],
-//         }}
-//         transition={{
-//           duration: 20,
-//           repeat: Infinity,
-//           ease: "easeInOut",
-//         }}
-//         style={{
-//           background: "linear-gradient(135deg, #B803B9, #ff0000)",
-//           backgroundSize: "200% 200%",
-//           filter: "blur(80px)",
-//           opacity: 0.8,
-//         }}
-//       /> */}
-//     </div>
-//   );
-// };
-
-// export default GradientShapes;

@@ -14,7 +14,7 @@ const Button = () => {
       }}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
     >
-      <Link href="/#">
+      <Link href="mailto:as.kolaib@gmail.com">
         <span className="flex items-center gap-1.5">
           let’s talk
 

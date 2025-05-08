@@ -46,13 +46,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+
   font-weight: bold;
   color: white;
 
 }
 
 .projects {
+
   z-index: 1;
 }
 
@@ -75,14 +76,13 @@ body {
 /* GHJK */
 
 
-
-
-
-
-
 .details {
   background-image: url('/images/background-m 1.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+.nextjs-toast{
+display: none !important;
 }

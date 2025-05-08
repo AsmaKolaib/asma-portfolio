@@ -1,22 +1,137 @@
 import Image from "next/image";
-import Project from "./project.jsx";
+
 import { motion } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import Project from "../project";
+import Modal from "../modal";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+const projects = [
+  {
+    title: "414 Agency ",
+    src: "414.png",
+    color: "#000000",
+    type: "Design & Development",
+    link: "https://fouronefour.co/",
+  },
+  {
+    title: "capital wools",
+    src: "capital-wools.png",
+    color: "#8C8C8C",
+    type: "Design & Development",
+    link: "https://capital-wools-site.vercel.app/ar ",
+  },
+  {
+    title: "cintana",
+    src: "cintana.png",
+    color: "#EFE8D3",
+    type: "Design & Development",
+    link: "https://dpba.cintana.com/",
+  },
+  {
+    title: "wosom",
+    src: "wosom.png",
+    color: "#706D63",
+    type: "Design & Development",
+    link: "https://wosom.vercel.app/",
+  },
+  {
+    title: "theteamistress",
+    src: "theteamistress.png",
+    color: "#706D63",
+    type: "Design & Development",
+    link: "https://theteamistress.com/",
+  },
+];
+
+const Arrow = () => (
+  <svg
+    className="flex-shrink-0"
+    width="86"
+    height="86"
+    viewBox="0 0 86 86"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M44.8486 12.6699C49.181 25.843 59.4193 36.2193 72.5029 40.7383L73.1279 40.9492L79.3623 42.999L73.1279 45.0508C59.9548 49.3832 49.5786 59.6215 45.0596 72.7051L44.8486 73.3301L42.7969 79.5645L40.7471 73.3301C36.4147 60.157 26.1763 49.7808 13.0928 45.2617L12.4678 45.0508L6.23145 42.999L12.4678 40.9492C25.6408 36.6168 36.0171 26.3785 40.5361 13.2949L40.7471 12.6699L42.7969 6.43359L44.8486 12.6699Z"
+      fill="#746BEB"
+      stroke="black"
+      strokeWidth="3.71"
+    />
+  </svg>
+);
 
 const Projects = () => {
+  const [modal, setModal] = useState({ active: false, index: 0 });
+  const wrapperRef = useRef(null);
+  const barRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const bar = barRef.current;
+      const wrapper = wrapperRef.current;
+
+      const barWidth = bar.scrollWidth;
+      const wrapperWidth = wrapper.offsetWidth;
+
+      const distance = barWidth - wrapperWidth;
+
+      gsap.fromTo(
+        bar,
+        { x: 0 },
+        {
+          x: -distance,
+          ease: "none",
+          scrollTrigger: {
+            trigger: wrapper,
+            start: "top bottom", // when top of section hits bottom of viewport
+            end: "top center", // to top center
+            scrub: true,
+            invalidateOnRefresh: true,
+          },
+        }
+      );
+    }, wrapperRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <motion.div
-      className="overflow-hidden w-screen h-screen "
-      whileTap={{ cursor: "grabbing" }}
+      className="overflow-hidden w-screen h-screen"
+      // whileTap={{ cursor: "grabbing" }}
     >
       <motion.div
-        className="flex h-full"
-        drag="x"
-        dragConstraints={{ left: -window.innerWidth * 2, right: 0 }}
-        dragElastic={0.2}
+        className="flex flex-col h-full justify-around" // removed justify-center
+        // drag="x"
+        // dragConstraints={{ left: -window.innerWidth * 2, right: 0 }}
+        // dragElastic={0.2}
       >
-        {/* Slide 1: Intro */}
-        <div className=" min-w-full h-screen grid grid-cols-2 gap-1 p-8">
-          <div className="h-full flex flex-col justify-center items-start text-left">
+        <div ref={wrapperRef} className="overflow-hidden w-full py-10">
+          <div
+            ref={barRef}
+            className="bar flex gap-4 font-light uppercase text-7xl whitespace-nowrap"
+          >
+            <span>HTML</span>
+            <Arrow />
+            <span>CSS</span>
+            <Arrow />
+            <span>JavaScript</span>
+            <Arrow />
+            <span>React.JS</span>
+            <Arrow />
+            <span>Tailwind</span>
+            <Arrow />
+          </div>
+        </div>
+        <div className="min-w-full h-screen grid grid-cols-2 content-center justify-center items-center gap-10 p-8 ">
+          <div
+            id="pro"
+            className="flex flex-col  justify-center items-start text-left "
+          >
             <h1 className="font-robuka text-9xl">projects</h1>
             <p className="text-4xl leading-relaxed mt-4">
               I have worked on a number of recent <br />
@@ -33,156 +148,23 @@ const Projects = () => {
             </p>
           </div>
 
-          <div className="h-full flex items-end justify-end  pb-20 pr-20">
-            <svg
-              width="211"
-              height="144"
-              viewBox="0 0 211 144"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {/* SVG lines... */}
-              <line
-                x1="104.221"
-                y1="2.35448"
-                x2="208.714"
-                y2="72.0166"
-                stroke="white"
-                strokeWidth="3"
-                strokeLinecap="round"
+          <div
+            id="table"
+            className=" h-100vh flex flex-col  justify-center items-start  "
+          >
+            {projects.map((project, index) => (
+              <Project
+                index={index}
+                title={project.title}
+                setModal={setModal}
+                type={project.type}
+                key={index}
+                link={project.link}
               />
-              <line
-                x1="104.221"
-                y1="2.35448"
-                x2="208.714"
-                y2="72.0166"
-                stroke="#A3A3A3"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-              <line
-                x1="1.5"
-                y1="-1.5"
-                x2="127.085"
-                y2="-1.5"
-                transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 102.141 141.807)"
-                stroke="white"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-              <line
-                x1="1.5"
-                y1="-1.5"
-                x2="127.085"
-                y2="-1.5"
-                transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 102.141 141.807)"
-                stroke="#A3A3A3"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-              <line
-                x1="56.3497"
-                y1="2.35448"
-                x2="160.843"
-                y2="72.0166"
-                stroke="white"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-              <line
-                x1="56.3497"
-                y1="2.35448"
-                x2="160.843"
-                y2="72.0166"
-                stroke="#A3A3A3"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-              <line
-                x1="1.5"
-                y1="-1.5"
-                x2="127.085"
-                y2="-1.5"
-                transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 54.2695 141.807)"
-                stroke="white"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-              <line
-                x1="1.5"
-                y1="-1.5"
-                x2="127.085"
-                y2="-1.5"
-                transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 54.2695 141.807)"
-                stroke="#A3A3A3"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-              <line
-                x1="2.85454"
-                y1="2.35546"
-                x2="107.348"
-                y2="72.0175"
-                stroke="white"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-              <line
-                x1="2.85454"
-                y1="2.35546"
-                x2="107.348"
-                y2="72.0175"
-                stroke="#A3A3A3"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-              <line
-                x1="1.5"
-                y1="-1.5"
-                x2="127.085"
-                y2="-1.5"
-                transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 0.774414 141.808)"
-                stroke="white"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-              <line
-                x1="1.5"
-                y1="-1.5"
-                x2="127.085"
-                y2="-1.5"
-                transform="matrix(0.83205 -0.5547 -0.5547 -0.83205 0.774414 141.808)"
-                stroke="#A3A3A3"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-            </svg>
+            ))}
+            <Modal modal={modal} projects={projects} />
           </div>
         </div>
-
-        {/* Slide 2: Project 1 */}
-        <div className="min-w-full h-screen flex items-center justify-center p-8 ml-[-90px]">
-          <Project
-            name="EXAMPLE 1"
-            description="Description of the first project..."
-            shortSummary="Short summary"
-            tyoe="web"
-            year="2012"
-          />
-        </div>
-
-        {/* Slide 3: Project 2 */}
-        <div className="min-w-full h-screen flex items-center justify-center p-8">
-          <Project
-            name="EXAMPLE 2"
-            description="Description of the second project..."
-            shortSummary="Short summary"
-            tyoe="app"
-            year="2014"
-          />
-        </div>
-
-        {/* Add more slides here */}
       </motion.div>
     </motion.div>
   );
