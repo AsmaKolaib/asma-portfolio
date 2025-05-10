@@ -1,6 +1,6 @@
-'use client';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+"use client";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Button = () => {
   return (
@@ -12,12 +12,11 @@ const Button = () => {
         initial: { scale: 1 },
         hover: { scale: 1.05 },
       }}
-      transition={{ duration: 0.3, ease: 'easeInOut' }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
     >
       <Link href="mailto:as.kolaib@gmail.com">
         <span className="flex items-center gap-1.5">
           let’s talk
-
           <motion.svg
             width="40"
             height="23"

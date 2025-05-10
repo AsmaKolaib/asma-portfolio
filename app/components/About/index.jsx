@@ -1,5 +1,3 @@
-
-
 "use client";
 import { useEffect } from "react";
 import { gsap } from "gsap";
@@ -19,10 +17,7 @@ export default function Gallery() {
 
   return (
     <>
-      <div
-        className="About bg-[#111112]  flex"
-    
-      >
+      <div className="About bg-[#111112]  flex">
         <div className="right bg-[#111112] h-screen w-1/2 flex flex-col justify-center overflow-hidden">
           <Image
             src="/images/2.gif"

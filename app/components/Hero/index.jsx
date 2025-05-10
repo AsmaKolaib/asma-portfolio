@@ -1,7 +1,7 @@
-'use client';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Button from '../Button';
+"use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Button from "../Button";
 
 const Hero = () => {
   return (
@@ -20,24 +20,30 @@ const Hero = () => {
         initial={{ scale: 6 }}
         animate={{ scale: 1 }}
         transition={{
-          delay:1,
+          delay: 1,
           duration: 2,
           ease: [0.22, 1, 0.36, 1],
-          type: 'tween',
+          type: "tween",
         }}
       />
 
       <div className="relative w-full h-screen flex flex-col items-center justify-around z-20">
-        <motion.div className="flex flex-col justify-center items-center relative mt-20 ml-80"
-        
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.8, duration: 0.8, ease: 'easeOut' }}>
+        <motion.div
+          className="flex flex-col justify-center items-center relative mt-20 ml-80"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.8, duration: 0.8, ease: "easeOut" }}
+        >
           <motion.svg
             viewBox="0 0 200 200"
             className="absolute w-64 h-64"
             animate={{ rotate: 360 }}
-            transition={{ delay:2.5, repeat: Infinity, duration: 10, ease: 'linear' }}
+            transition={{
+              delay: 2.5,
+              repeat: Infinity,
+              duration: 10,
+              ease: "linear",
+            }}
           >
             <defs>
               <path
@@ -56,17 +62,14 @@ const Hero = () => {
           </motion.svg>
 
           <Image
-          
             src="/images/img.png"
             alt="img"
             width={100}
             height={100}
             className="rounded-full w-40 h-40"
             style={{
-              clipPath: 'circle(50%)',
+              clipPath: "circle(50%)",
             }}
-            
-            
           />
         </motion.div>
 
@@ -75,7 +78,7 @@ const Hero = () => {
           className="w-full text-center"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.8, duration: 0.8, ease: 'easeOut' }}
+          transition={{ delay: 1.8, duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="font-robuka text-[10rem]">Asma Koliab</h1>
           <p className="text-2xl mt-[-50px]">A web designer and developer</p>
@@ -85,7 +88,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.8, duration: 0.6, ease: 'easeOut' }}
+          transition={{ delay: 1.8, duration: 0.6, ease: "easeOut" }}
           className="justify-end"
         >
           <Button />

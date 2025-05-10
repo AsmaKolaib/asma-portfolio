@@ -37,6 +37,11 @@ body {
   font-family: var(--font-poppins), Helvetica, sans-serif;
   scroll-behavior: smooth;
   overflow-y: auto;
+  cursor: none;
+}
+
+a {
+  cursor: none;
 }
 
 .sticky-section {
@@ -49,11 +54,9 @@ body {
 
   font-weight: bold;
   color: white;
-
 }
 
 .projects {
-
   z-index: 1;
 }
 
@@ -75,14 +78,13 @@ body {
 }
 /* GHJK */
 
-
 .details {
-  background-image: url('/images/background-m 1.png');
+  background-image: url("/images/background-m 1.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-.nextjs-toast{
-display: none !important;
+.nextjs-toast {
+  display: none !important;
 }

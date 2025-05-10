@@ -1,13 +1,14 @@
-'use client'
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+"use client";
+import { motion } from "framer-motion";
+import Link from "next/link";
 const Header = () => {
   return (
-    <motion.div 
-    initial={{ opacity: 0, y: -30 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 1.5, duration: 0.6, ease: 'easeOut' }}
-    className="absolute z-50 top-0 left-0 w-full bg-transparent">
+    <motion.div
+      initial={{ opacity: 0, y: -30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1.5, duration: 0.6, ease: "easeOut" }}
+      className="absolute z-50 top-0 left-0 w-full bg-transparent"
+    >
       <div className="container mx-auto flex justify-between items-center p-8">
         <h1 className="font-robuka text-5xl lg:text-4xl">AK</h1>
         <ul className="flex gap-8 text-2xl">
@@ -22,7 +23,7 @@ const Header = () => {
           </Link>
         </ul>
       </div>
-    </motion.div >
+    </motion.div>
   );
 };
 

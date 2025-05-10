@@ -13,7 +13,7 @@ const projects = [
     title: "414 Agency ",
     src: "414.png",
     color: "#000000",
-    type: "Design & Development",
+    type: "Development",
     link: "https://fouronefour.co/",
   },
   {
@@ -27,21 +27,21 @@ const projects = [
     title: "cintana",
     src: "cintana.png",
     color: "#EFE8D3",
-    type: "Design & Development",
+    type: " Development",
     link: "https://dpba.cintana.com/",
   },
   {
     title: "wosom",
     src: "wosom.png",
     color: "#706D63",
-    type: "Design & Development",
+    type: "Development",
     link: "https://wosom.vercel.app/",
   },
   {
     title: "theteamistress",
     src: "theteamistress.png",
     color: "#706D63",
-    type: "Design & Development",
+    type: " Development",
     link: "https://theteamistress.com/",
   },
 ];
