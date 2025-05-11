@@ -10,11 +10,11 @@ function Home() {
   return (
     <>
       <Header />
-      <Hero />
-      <div id="projects" className="">
+      <Hero /> 
+      {/* <div id="projects" className="">
         <Projects />
-      </div>
-      <div id="about" className=" relative ">
+      </div> */}
+      <div id="about" className="  ">
         <About />
       </div>
       <div id="connect" className=" ">

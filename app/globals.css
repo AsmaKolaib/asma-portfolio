@@ -38,6 +38,7 @@ body {
   scroll-behavior: smooth;
   overflow-y: auto;
   cursor: none;
+  overflow-x: hidden;
 }
 
 a {

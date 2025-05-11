@@ -4,7 +4,7 @@ import Link from "next/link";
 import Button from "../Button";
 const Connect = () => {
   return (
-    <div className="relative w-full h-screen flex items-center justify-center bg-black  ">
+    <div className="relative w-full h-screen flex items-center justify-center bg-[#191919] overflow-hidden  ">
       <motion.div
         className="absolute w-[300px] h-[300px] rounded-full"
         initial={{ x: -50 }}
@@ -12,7 +12,7 @@ const Connect = () => {
           x: [0, 150, -150, 0],
         }}
         transition={{
-          duration: 5,
+          duration: 10,
           repeat: Infinity,
           ease: "easeInOut",
         }}
@@ -32,7 +32,7 @@ const Connect = () => {
           x: [0, 120, -120, 0],
         }}
         transition={{
-          duration: 7,
+          duration: 13,
           repeat: Infinity,
           ease: "easeInOut",
         }}
@@ -46,10 +46,10 @@ const Connect = () => {
 
       <motion.div className=" relative container m-auto h-screen flex flex-col justify-around items-center">
         <div className="flex flex-col justify-center items-start w-full pt-35">
-          <p className="text-[8.3rem] font-extrabold text-white ">
+          <p className=" px-6 lg:px-0 text-[5.5rem] lg:text-[8.3rem] font-extrabold text-white ">
             Let me help
           </p>
-          <span className="font-robuka text-[12.5rem] text-end self-center mt-[-90px] text-[#E24FE3]">
+          <span className="font-robuka text-[5.5rem] lg:text-[12.5rem] text-end self-center mt-[-40px]  lg:mt-[-90px] text-[#E24FE3]">
             You
           </span>
         </div>
@@ -68,6 +68,7 @@ const Connect = () => {
                 hover: { scale: 1.05 },
               }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="w-10 h-10 lg:w-20 lg:h-20"
             >
               <rect
                 x="0.921875"
@@ -97,6 +98,7 @@ const Connect = () => {
                 hover: { scale: 1.05 },
               }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="w-10 h-10 lg:w-20 lg:h-20"
             >
               <rect
                 x="0.921875"
@@ -126,6 +128,7 @@ const Connect = () => {
                 hover: { scale: 1.05 },
               }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="w-10 h-10 lg:w-20 lg:h-20"
             >
               <rect
                 x="0.921875"
@@ -145,8 +148,8 @@ const Connect = () => {
 
         <Button />
 
-        <p className="text-lg text-gray-500 text-center w-full mt-6 ">
-          Copyright © {new Date().getFullYear()} Asma
+        <p className=" text-sm lg:text-base text-gray-500 text-center w-full mt-6 ">
+          Copyright © {new Date().getFullYear()} asma
         </p>
       </motion.div>
     </div>

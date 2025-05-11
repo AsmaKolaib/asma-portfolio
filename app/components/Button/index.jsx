@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Button = () => {
   return (
     <motion.div
-      className="flex gap-1.5 items-center justify-center bg-button py-2 px-5 rounded-full text-xl overflow-hidden cursor-pointer w-fit"
+      className="flex gap-1.5 items-center justify-center bg-button py-2 px-5 rounded-full text-base md:text-xl overflow-hidden cursor-pointer w-fit"
       whileHover="hover"
       initial="initial"
       variants={{

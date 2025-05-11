@@ -14,9 +14,8 @@ const Hero = () => {
         className="absolute top-0 right-0 transform scale-[5.6] translate-x-[-140px] -translate-y-[-230px] object-contain"
       />
 
-      {/* Initial scaling animation */}
       <motion.div
-        className="absolute outline-[1000px] outline-[#191919] w-96 h-[28rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        className="absolute outline-[1000px] outline-[#191919] w-40 h-[16rem] lg:w-96 lg:h-[28rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         initial={{ scale: 6 }}
         animate={{ scale: 1 }}
         transition={{
@@ -29,14 +28,14 @@ const Hero = () => {
 
       <div className="relative w-full h-screen flex flex-col items-center justify-around z-20">
         <motion.div
-          className="flex flex-col justify-center items-center relative mt-20 ml-80"
+          className="flex flex-col justify-center items-center relative mt-30 ml-40 lg:mt-20 lg:ml-80"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.8, duration: 0.8, ease: "easeOut" }}
         >
           <motion.svg
             viewBox="0 0 200 200"
-            className="absolute w-64 h-64"
+            className="absolute  w-40 h-40"
             animate={{ rotate: 360 }}
             transition={{
               delay: 2.5,
@@ -54,7 +53,7 @@ const Hero = () => {
               a 75,75 0 1,1 -150,0"
               />
             </defs>
-            <text fill="white" fontSize="30">
+            <text fill="white" fontSize="20">
               <textPath href="#circlePath" startOffset="0%">
                 4 years of experience
               </textPath>
@@ -66,25 +65,23 @@ const Hero = () => {
             alt="img"
             width={100}
             height={100}
-            className="rounded-full w-40 h-40"
+            className="rounded-full w-20 h-20 lg:w-40 lg:h-40"
             style={{
               clipPath: "circle(50%)",
             }}
           />
         </motion.div>
 
-        {/* Text animation */}
         <motion.div
-          className="w-full text-center"
+          className="w-full text-center over"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.8, duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="font-robuka text-[10rem]">Asma Koliab</h1>
-          <p className="text-2xl mt-[-50px]">A web designer and developer</p>
+          <h1 className="font-robuka text-6xl lg:text-[10rem]">Asma Koliab</h1>
+          <p className="text-lg mt-0 lg:mt-[-50px]">A web designer and developer</p>
         </motion.div>
 
-        {/* Button animation */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

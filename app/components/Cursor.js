@@ -9,10 +9,12 @@ export default function Cursor() {
   const imageCursorRef = useRef(null)
 
   useEffect(() => {
+    // Only enable cursor effects on large screens (1024px and up)
+    if (typeof window !== 'undefined' && window.innerWidth < 1024) return
+
     const moveCursor = (e) => {
       if (!cursorRef.current || !trailingRef.current || !imageCursorRef.current) return
 
- 
       gsap.to(cursorRef.current, {
         x: e.clientX,
         y: e.clientY,
@@ -27,7 +29,6 @@ export default function Cursor() {
         ease: 'power2.out',
       })
 
-      // Optional trailing circle
       gsap.to(trailingRef.current, {
         x: e.clientX,
         y: e.clientY,
@@ -48,14 +49,12 @@ export default function Cursor() {
 
     document.addEventListener('mousemove', moveCursor)
 
-    // Attach hover listeners to all <a> tags
     const links = document.querySelectorAll('a')
     links.forEach((link) => {
       link.addEventListener('mouseenter', handleLinkHover)
       link.addEventListener('mouseleave', handleLinkLeave)
     })
 
-    // Cleanup
     return () => {
       document.removeEventListener('mousemove', moveCursor)
       links.forEach((link) => {
@@ -69,21 +68,20 @@ export default function Cursor() {
     <>
       <div
         ref={cursorRef}
-        className="pointer-events-none fixed top-0 left-0 z-[9999] h-6 w-6 rounded-full bg-[#933bb8] border-2 border-[#933bb8]"
+        className="hidden lg:block pointer-events-none fixed top-0 left-0 z-[9999] h-6 w-6 rounded-full bg-[#933bb8] border-2 border-[#933bb8]"
       ></div>
 
       <img
         ref={imageCursorRef}
-        src="/images/cursor.png" 
+        src="/images/cursor.png"
         alt="Link Cursor"
-        className="pointer-events-none fixed top-0 left-0 z-[9999] hidden h-8 w-8"
+        className="hidden lg:block pointer-events-none fixed top-0 left-0 z-[9999] h-8 w-8"
       />
 
       <div
         ref={trailingRef}
-        className="pointer-events-none fixed top-0 left-0 z-[9998] h-12 w-12 rounded-full border-2 border-"
+        className="hidden lg:block pointer-events-none fixed top-0 left-0 z-[9998] h-12 w-12 rounded-full border-2 border-[#933bb8]"
       ></div>
     </>
   )
 }
-
