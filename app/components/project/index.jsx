@@ -3,11 +3,11 @@ import React from "react";
 import styles from "./style.module.css";
 import Link from "next/link";
 
-export default function index({ index, title, setModal, type, link }) {
-  console.log("sdfs", link);
+export default function index({ index, title, setModal, type, url }) {
+
   return (
     <a
-      href={link}
+      href={url}
       onMouseEnter={() => {
         setModal({ active: true, index });
       }}

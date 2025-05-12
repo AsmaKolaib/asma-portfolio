@@ -35,7 +35,7 @@ const Hero = () => {
         >
           <motion.svg
             viewBox="0 0 200 200"
-            className="absolute  w-40 h-40"
+            className="absolute  w-40 h-40  md:w-64 md:h-64"
             animate={{ rotate: 360 }}
             transition={{
               delay: 2.5,

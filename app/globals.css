@@ -74,10 +74,10 @@ a {
   display: none;
 }
 .no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
 }
-/* GHJK */
+
 
 .details {
   background-image: url("/images/background-m 1.png");

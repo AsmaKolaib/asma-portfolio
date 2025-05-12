@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import Project from "../project";
@@ -159,7 +158,7 @@ const Projects = () => {
                 setModal={setModal}
                 type={project.type}
                 key={index}
-                link={project.link}
+                url={project.link}
               />
             ))}
             <Modal modal={modal} projects={projects} />
