@@ -6,11 +6,12 @@ import Button from "../Button";
 const Hero = () => {
   return (
     <div className="w-screen h-screen bg-black relative overflow-hidden">
-      <Image
-        src="/images/1.gif"
+      <img
+        src="/images/hero.gif"
         alt="3D blob"
         width={600}
         height={600}
+        loading="eager"
         className="absolute top-0 right-0 transform scale-[5.6] translate-x-[-140px] -translate-y-[-230px] object-contain"
       />
 

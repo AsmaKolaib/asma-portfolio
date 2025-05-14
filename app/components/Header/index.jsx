@@ -11,7 +11,7 @@ const Header = () => {
     >
       <div className="container mx-auto flex justify-between items-center p-8">
         <h1 className="font-robuka text-2xl  lg:text-4xl">AK</h1>
-        <ul className="flex gap-8 text-lg text-2xl">
+        <ul className="flex gap-8 text-lg lg:text-2xl">
           <Link href="#about">
             <li>About</li>
           </Link>

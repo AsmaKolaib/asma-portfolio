@@ -5,45 +5,45 @@ import Project from "../project";
 import Modal from "../modal";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { projects } from '../../data/data';
 gsap.registerPlugin(ScrollTrigger);
-const projects = [
-  {
-    title: "414 Agency ",
-    src: "414.png",
-    color: "#000000",
-    type: "Development",
-    link: "https://fouronefour.co/",
-  },
-  {
-    title: "capital wools",
-    src: "capital-wools.png",
-    color: "#8C8C8C",
-    type: "Design & Development",
-    link: "https://capital-wools-site.vercel.app/ar ",
-  },
-  {
-    title: "cintana",
-    src: "cintana.png",
-    color: "#EFE8D3",
-    type: " Development",
-    link: "https://dpba.cintana.com/",
-  },
-  {
-    title: "wosom",
-    src: "wosom.png",
-    color: "#706D63",
-    type: "Development",
-    link: "https://wosom.vercel.app/",
-  },
-  {
-    title: "theteamistress",
-    src: "theteamistress.png",
-    color: "#706D63",
-    type: " Development",
-    link: "https://theteamistress.com/",
-  },
-];
+
+//   {
+//     title: "414 Agency ",
+//     src: "414.png",
+//     color: "#000000",
+//     type: "Development",
+//     link: "https://fouronefour.co/",
+//   },
+//   {
+//     title: "capital wools",
+//     src: "capital-wools.png",
+//     color: "#8C8C8C",
+//     type: "Design & Development",
+//     link: "https://capital-wools-site.vercel.app/ar ",
+//   },
+//   {
+//     title: "cintana",
+//     src: "cintana.png",
+//     color: "#EFE8D3",
+//     type: " Development",
+//     link: "https://dpba.cintana.com/",
+//   },
+//   {
+//     title: "wosom",
+//     src: "wosom.png",
+//     color: "#706D63",
+//     type: "Development",
+//     link: "https://wosom.vercel.app/",
+//   },
+//   {
+//     title: "theteamistress",
+//     src: "theteamistress.png",
+//     color: "#706D63",
+//     type: " Development",
+//     link: "https://theteamistress.com/",
+//   },
+// ];
 
 const Arrow = () => (
   <svg
@@ -100,7 +100,7 @@ const Projects = () => {
 
   return (
     <motion.div
-      className="overflow-hidden w-screen h-screen"
+      className="overflow-hidden w-screen h-screen bg-[#191919]"
       // whileTap={{ cursor: "grabbing" }}
     >
       <motion.div

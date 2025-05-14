@@ -54,7 +54,7 @@ export default function About() {
       <div className="About bg-[#111112] w-full  grid grid-cols-1  md:grid-cols-2">
         <div className=" right bg-[#111112] h-[50vh] md:h-screen w-full flex flex-col justify-center overflow-hidden">
           <img
-            src="/images/2.gif"
+            src="/images/skills.gif"
             alt="img"
             width={100}
             height={100}
