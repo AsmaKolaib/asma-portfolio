@@ -9,25 +9,32 @@ export default function Cursor() {
   const imageCursorRef = useRef(null)
 
   useEffect(() => {
+    const isTouchDevice = window.innerWidth <= 1024 // Hide on mobile & tablets
+  
+    if (isTouchDevice) {
+      if (cursorRef.current) cursorRef.current.style.display = 'none'
+      if (imageCursorRef.current) imageCursorRef.current.style.display = 'none'
+      if (trailingRef.current) trailingRef.current.style.display = 'none'
+      return // Skip cursor logic
+    }
+  
     const moveCursor = (e) => {
       if (!cursorRef.current || !trailingRef.current || !imageCursorRef.current) return
-
- 
+  
       gsap.to(cursorRef.current, {
         x: e.clientX,
         y: e.clientY,
         duration: 0.2,
         ease: 'power2.out',
       })
-
+  
       gsap.to(imageCursorRef.current, {
         x: e.clientX,
         y: e.clientY,
         duration: 0.2,
         ease: 'power2.out',
       })
-
-      // Optional trailing circle
+  
       gsap.to(trailingRef.current, {
         x: e.clientX,
         y: e.clientY,
@@ -35,27 +42,25 @@ export default function Cursor() {
         ease: 'power2.out',
       })
     }
-
+  
     const handleLinkHover = () => {
       if (cursorRef.current) cursorRef.current.style.display = 'none'
       if (imageCursorRef.current) imageCursorRef.current.style.display = 'block'
     }
-
+  
     const handleLinkLeave = () => {
       if (cursorRef.current) cursorRef.current.style.display = 'block'
       if (imageCursorRef.current) imageCursorRef.current.style.display = 'none'
     }
-
+  
     document.addEventListener('mousemove', moveCursor)
-
-    // Attach hover listeners to all <a> tags
+  
     const links = document.querySelectorAll('a')
     links.forEach((link) => {
       link.addEventListener('mouseenter', handleLinkHover)
       link.addEventListener('mouseleave', handleLinkLeave)
     })
-
-    // Cleanup
+  
     return () => {
       document.removeEventListener('mousemove', moveCursor)
       links.forEach((link) => {
@@ -64,6 +69,7 @@ export default function Cursor() {
       })
     }
   }, [])
+  
 
   return (
     <>
