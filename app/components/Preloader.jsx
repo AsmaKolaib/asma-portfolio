@@ -9,19 +9,19 @@ const Preloader = ({ onComplete }) => {
   useEffect(() => {
     const el = loaderRef.current;
 
-    // Optional fade-in on mount (if needed)
+  
     gsap.fromTo(
       el,
       { opacity: 0 },
       { opacity: 1, duration: 0.5, ease: 'power2.out' }
     );
 
-    // Exit animation
+
     gsap.to(el, {
       opacity: 0,
       y: '-100%',
       duration: 1,
-      delay: 3, // how long preloader stays visible
+      delay: 3,
       ease: 'power2.out',
       onComplete,
     });

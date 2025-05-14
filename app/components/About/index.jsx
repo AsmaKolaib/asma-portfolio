@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
@@ -18,7 +18,7 @@ export default function About() {
         const { isDesktop, isMobile } = context.conditions;
   
         if (isDesktop) {
-          // Desktop: pin the entire .right section as usual
+  
           ScrollTrigger.create({
             trigger: ".About",
             start: "top top",
@@ -31,11 +31,11 @@ export default function About() {
         }
   
         if (isMobile) {
-          // Mobile: pin only the top part of .right
+     
           ScrollTrigger.create({
             trigger: ".About",
             start: "top top",
-            end: "bottom+=100% top", // Adjust this based on how long you want the pin
+            end: "bottom+=100% top", 
             pin: ".right",
             pinSpacing: false,
             anticipatePin: 1,
@@ -53,11 +53,12 @@ export default function About() {
     <>
       <div className="About bg-[#111112] w-full  grid grid-cols-1  md:grid-cols-2">
         <div className=" right bg-[#111112] h-[50vh] md:h-screen w-full flex flex-col justify-center overflow-hidden">
-          <Image
+          <img
             src="/images/2.gif"
             alt="img"
             width={100}
             height={100}
+            loading="eager"
             className=" w-[100vw] h-[50vh] md:h-screen object-contain scale-200"
           />
           <h1 className="w-full  text-center absolute font-robuka text-7xl md:text-9xl p-8 pb-14 text-white z-10">
