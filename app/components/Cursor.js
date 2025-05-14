@@ -9,7 +9,6 @@ export default function Cursor() {
   const imageCursorRef = useRef(null)
 
   useEffect(() => {
-    // Only enable cursor effects on large screens (1024px and up)
     if (typeof window !== 'undefined' && window.innerWidth < 1024) return
 
     const moveCursor = (e) => {
@@ -75,7 +74,8 @@ export default function Cursor() {
         ref={imageCursorRef}
         src="/images/cursor.png"
         alt="Link Cursor"
-        className="hidden lg:block pointer-events-none fixed top-0 left-0 z-[9999] h-8 w-8"
+        className="lg:block pointer-events-none fixed top-0 left-0 z-[9999] h-8 w-8"
+        style={{ display: 'none' }} // ensure hidden initially
       />
 
       <div

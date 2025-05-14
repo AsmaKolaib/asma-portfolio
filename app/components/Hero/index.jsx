@@ -79,7 +79,7 @@ const Hero = () => {
           transition={{ delay: 1.8, duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="font-robuka text-6xl lg:text-[10rem]">Asma Koliab</h1>
-          <p className="text-lg mt-0 lg:mt-[-50px]">A web designer and developer</p>
+          <p className="text-lg  mt-0 lg:text-4xl ">A web designer and developer</p>
         </motion.div>
 
         <motion.div

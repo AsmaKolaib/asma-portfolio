@@ -41,7 +41,7 @@ export default function Cardm() {
       >
         Projects
       </motion.h1>
-      <motion.p
+      <motion.div
         className="text-lg md:text-6xl font-bold mt-4 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -64,7 +64,7 @@ export default function Cardm() {
             />
           </motion.div>
         </span>
-      </motion.p>
+      </motion.div>
     </motion.div>
           <div ref={container} className='relative '>
       {
