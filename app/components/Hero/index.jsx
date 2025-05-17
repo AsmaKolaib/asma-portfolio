@@ -16,7 +16,7 @@ const Hero = () => {
       />
 
       <motion.div
-        className="absolute outline-[1000px] outline-[#191919] w-40 h-[16rem] lg:w-96 lg:h-[28rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        className="absolute border-2 border-[#252525] outline-[1000px] outline-[#0a0a0a] w-40 h-[16rem]  lg:w-96 lg:h-[28rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         initial={{ scale: 6 }}
         animate={{ scale: 1 }}
         transition={{
@@ -29,14 +29,14 @@ const Hero = () => {
 
       <div className="relative w-full h-screen flex flex-col items-center justify-around z-20">
         <motion.div
-          className="flex flex-col justify-center items-center relative mt-30 ml-40 lg:mt-20 lg:ml-80"
+          className="flex flex-col justify-center items-center relative mt-50 ml-40  md:mt-50 lg:mt-20 lg:ml-80"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.8, duration: 0.8, ease: "easeOut" }}
         >
           <motion.svg
             viewBox="0 0 200 200"
-            className="absolute  w-40 h-40  md:w-64 md:h-64"
+            className="absolute  w-40 h-40  lg:w-64 lg:h-64"
             animate={{ rotate: 360 }}
             transition={{
               delay: 2.5,
@@ -74,13 +74,13 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          className="w-full text-center over"
+          className="w-full text-center mt-[-92px] lg:mt-0"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.8, duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="font-robuka text-6xl lg:text-[10rem]">Asma Koliab</h1>
-          <p className="text-lg  mt-0 lg:text-4xl ">A web designer and developer</p>
+          <h1 className="text-white font-robuka text-6xl lg:text-[10rem]">Asma Koliab</h1>
+          <p className="text-white text-lg  mt-0 lg:text-4xl ">A web designer and developer</p>
         </motion.div>
 
         <motion.div

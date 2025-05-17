@@ -4,7 +4,7 @@ import Link from "next/link";
 import Button from "../Button";
 const Connect = () => {
   return (
-    <div className="relative w-full h-screen flex items-center justify-center bg-[#191919] overflow-hidden  ">
+    <div className="relative w-full h-screen flex items-center justify-center bg-black overflow-hidden  ">
       <motion.div
         className="absolute w-[300px] h-[300px] rounded-full"
         initial={{ x: -50 }}
@@ -73,7 +73,7 @@ const Connect = () => {
               className="inline-block"
             >
               <Link
-                href="#"
+                href="https://www.linkedin.com/in/asmakolaib/"
                 className="bg-button rounded-full p-3 inline-block"
               >
                 <svg
@@ -98,7 +98,7 @@ const Connect = () => {
               className="inline-block"
             >
               <Link
-                href="#"
+                href="https://x.com/as_kolaib"
                 className="bg-button rounded-full p-3 inline-block"
               >
                  <svg
@@ -123,7 +123,7 @@ const Connect = () => {
               className="inline-block"
             >
               <Link
-                href="#"
+                href="https://github.com/AsmaKolaib"
                 className="bg-button rounded-full p-3 inline-block"
               >
               <svg

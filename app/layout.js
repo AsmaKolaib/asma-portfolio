@@ -24,7 +24,8 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${poppins.variable} ${myFont.variable} antialiased`}>
       <head>
         {/*  Preload your GIF here */}
-        <link rel="preload" href="/images/2.gif" as="image" />
+        <link rel="preload" href="/images/skills.gif" as="image" />
+        <link rel="preload" href="/images/hero.gif" as="image" />
       </head>
       <body>
         <Cursor />

@@ -25,7 +25,7 @@ function AnimatedSection({ children, delay = 0 }) {
       variants={fadeInVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      transition={{ duration: 0.8, delay }}
+      transition={{ duration: 0.3, delay }}
     >
       {children}
     </motion.div>
@@ -56,7 +56,7 @@ function Home() {
           </AnimatedSection>
 
           {/* Projects Section */}
-          <div id="projects">
+          <div id="projects " className=" ">
             <AnimatedSection delay={0.2}>
               <div className="hidden lg:block">
                 <Projects />

@@ -102,7 +102,7 @@ const Projects = () => {
 
   return (
     <motion.div
-      className="overflow-hidden w-screen h-screen bg-[#191919]"
+      className="overflow-hidden w-screen h-screen bg-black"
       // whileTap={{ cursor: "grabbing" }}
     >
       <motion.div
@@ -128,13 +128,13 @@ const Projects = () => {
             <Arrow />
           </div>
         </div>
-        <div className="min-w-full h-screen grid grid-cols-2 content-center justify-center items-center gap-10 p-8 ">
+        <div className=" container m-auto w-full h-screen grid grid-cols-2 content-center justify-center items-center gap-10 p-8  ">
           <div
             id="pro"
             className="flex flex-col  justify-center items-start text-left "
           >
             <h1 className="font-robuka text-9xl">projects</h1>
-            <p className="text-4xl leading-relaxed mt-4">
+            <p className="text-3xl leading-relaxed mt-4">
               I have worked on a number of recent <br />
               <span className="inline-flex items-center gap-4">
                 projects, including...

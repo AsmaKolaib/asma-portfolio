@@ -34,7 +34,7 @@ export default function Cardm() {
       transition={{ duration: 1.5 }}
     >
       <motion.h1
-        className="font-robuka text-7xl md:text-9xl p-8 pb-14 text-white"
+        className="font-robuka text-7xl lg:text-9xl p-8 pb-14 text-white"
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
@@ -42,7 +42,7 @@ export default function Cardm() {
         Projects
       </motion.h1>
       <motion.div
-        className="text-lg md:text-6xl font-bold mt-4 text-center"
+        className="text-lg lg:text-6xl font-bold mt-4 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}

@@ -6,35 +6,32 @@ import gsap from 'gsap'
 export default function Cursor() {
   const cursorRef = useRef(null)
   const trailingRef = useRef(null)
-  const imageCursorRef = useRef(null)
 
   useEffect(() => {
-    const isTouchDevice = window.innerWidth <= 1024 // Hide on mobile & tablets
-  
-    if (isTouchDevice) {
-      if (cursorRef.current) cursorRef.current.style.display = 'none'
-      if (imageCursorRef.current) imageCursorRef.current.style.display = 'none'
-      if (trailingRef.current) trailingRef.current.style.display = 'none'
-      return // Skip cursor logic
-    }
-  
+    const centerX = window.innerWidth / 2
+    const centerY = window.innerHeight / 2
+
+    // Set initial position at center
+    gsap.set(cursorRef.current, {
+      x: centerX,
+      y: centerY,
+    })
+
+    gsap.set(trailingRef.current, {
+      x: centerX,
+      y: centerY,
+    })
+
     const moveCursor = (e) => {
-      if (!cursorRef.current || !trailingRef.current || !imageCursorRef.current) return
-  
+      if (!cursorRef.current || !trailingRef.current) return
+
       gsap.to(cursorRef.current, {
         x: e.clientX,
         y: e.clientY,
         duration: 0.2,
         ease: 'power2.out',
       })
-  
-      gsap.to(imageCursorRef.current, {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 0.2,
-        ease: 'power2.out',
-      })
-  
+
       gsap.to(trailingRef.current, {
         x: e.clientX,
         y: e.clientY,
@@ -42,52 +39,52 @@ export default function Cursor() {
         ease: 'power2.out',
       })
     }
-  
-    const handleLinkHover = () => {
-      if (cursorRef.current) cursorRef.current.style.display = 'none'
-      if (imageCursorRef.current) imageCursorRef.current.style.display = 'block'
+
+    const handleMouseOver = (e) => {
+      const isLink = e.target.closest('a')
+      if (isLink && cursorRef.current) {
+        gsap.to(cursorRef.current, {
+          backgroundColor: '#ff69b4',
+          borderColor: '#ff69b4',
+          scale: 1.8,
+          duration: 0.3,
+        })
+      }
     }
-  
-    const handleLinkLeave = () => {
-      if (cursorRef.current) cursorRef.current.style.display = 'block'
-      if (imageCursorRef.current) imageCursorRef.current.style.display = 'none'
+
+    const handleMouseOut = (e) => {
+      const isLink = e.target.closest('a')
+      if (isLink && cursorRef.current) {
+        gsap.to(cursorRef.current, {
+          backgroundColor: '#933bb8',
+          borderColor: '#933bb8',
+          scale: 1,
+          duration: 0.3,
+        })
+      }
     }
-  
+
     document.addEventListener('mousemove', moveCursor)
-  
-    const links = document.querySelectorAll('a')
-    links.forEach((link) => {
-      link.addEventListener('mouseenter', handleLinkHover)
-      link.addEventListener('mouseleave', handleLinkLeave)
-    })
-  
+    document.addEventListener('mouseover', handleMouseOver)
+    document.addEventListener('mouseout', handleMouseOut)
+
     return () => {
       document.removeEventListener('mousemove', moveCursor)
-      links.forEach((link) => {
-        link.removeEventListener('mouseenter', handleLinkHover)
-        link.removeEventListener('mouseleave', handleLinkLeave)
-      })
+      document.removeEventListener('mouseover', handleMouseOver)
+      document.removeEventListener('mouseout', handleMouseOut)
     }
   }, [])
-  
 
   return (
     <>
       <div
         ref={cursorRef}
-        className="pointer-events-none fixed top-0 left-0 z-[9999] h-6 w-6 rounded-full bg-[#933bb8] border-2 border-[#933bb8]"
+        className="pointer-events-none fixed top-0 left-0 z-[9999] h-6 w-6 rounded-full bg-[#933bb8] border-2 border-[#933bb8] hidden lg:block"
       ></div>
-
-      <img
-        ref={imageCursorRef}
-        src="/images/cursor.png" 
-        alt="Link Cursor"
-        className="pointer-events-none fixed top-0 left-0 z-[9999] hidden h-8 w-8"
-      />
 
       <div
         ref={trailingRef}
-        className="pointer-events-none fixed top-0 left-0 z-[9998] h-12 w-12 rounded-full border-2 border-"
+        className="pointer-events-none fixed top-0 left-0 z-[9996] h-10 w-10 rounded-full border-2 border-white hidden lg:block"
       ></div>
     </>
   )

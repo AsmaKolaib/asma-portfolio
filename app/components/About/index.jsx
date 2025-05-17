@@ -51,25 +51,25 @@ export default function About() {
 
   return (
     <>
-      <div className="About bg-[#111112] w-full  grid grid-cols-1  md:grid-cols-2">
-        <div className=" right bg-[#111112] h-[50vh] md:h-screen w-full flex flex-col justify-center overflow-hidden">
+      <div className="About bg-[#111112] w-full  grid grid-cols-1  lg:grid-cols-2">
+        <div className=" right bg-[#111112] h-[50vh] lg:h-screen w-full flex flex-col justify-center overflow-hidden">
           <img
             src="/images/skills.gif"
             alt="img"
             width={100}
             height={100}
             loading="eager"
-            className=" w-[100vw] h-[50vh] md:h-screen object-contain scale-200"
+            className=" w-[100vw] h-[50vh] lg:h-screen object-contain scale-200"
           />
-          <h1 className="w-full  text-center absolute font-robuka text-7xl md:text-9xl p-8 pb-14 text-white z-10">
+          <h1 className="w-full  text-center absolute font-robuka text-7xl lg:text-9xl p-8 pb-14 text-white z-10">
             About
           </h1>
         </div>
         <div className=" details bg-transparent w-full">
-          <div className="md:m-auto md:w-[80%]">
-            <div className="h-[50vh] md:h-screen flex flex-col justify-center items-center p-8 md:p-20 ">
-              <p className="text-base md:text-2xl">
-                <span className="text-lg md:text-6xl font-bold">I am </span>a designer and
+          <div className="lg:m-auto lg:w-[80%]">
+            <div className="h-[50vh] lg:h-screen flex flex-col justify-center items-center p-8 lg:p-20 ">
+              <p className="text-base lg:text-2xl">
+                <span className="text-lg lg:text-6xl font-bold">I am </span>a designer and
                 developer who is passionate about creating digital experiences.
                 I enjoy combining clean, efficient code with thoughtful,
                 user-centered design. I’m always looking for ways to improve my
@@ -80,17 +80,17 @@ export default function About() {
               </p>
             </div>
 
-            <div className="h-[50vh] md:h-screen flex flex-col justify-center items-center p-8 md:p-20 ">
-              <p className="text-base md:text-2xl">
-                <span className="text-lg md:text-6xl font-bold">Who </span>developed an
+            <div className="h-[50vh] lg:h-screen flex flex-col justify-center items-center p-8 lg:p-20 ">
+              <p className="text-base lg:text-2xl">
+                <span className="text-lg lg:text-6xl font-bold">Who </span>developed an
                 extensive skills to help you and create awesome work together
                 and help you get the best outcome{" "}
               </p>
             </div>
 
-            <div className="h-[50vh]  md:h-screen flex flex-col justify-center items-center p-8 md:p-20 ">
-              <p className="text-base md:text-2xl">
-                <span className="text-lg md:text-6xl font-bold">Good </span>at designs - UI
+            <div className="h-[50vh]  lg:h-screen flex flex-col justify-center items-center p-8 lg:p-20 ">
+              <p className="text-base lg:text-2xl">
+                <span className="text-lg lg:text-6xl font-bold">Good </span>at designs - UI
                 design and design process and web for build an complete projects
                 - with HTML5 , CSS3 , JavaScript , Reacts , NextJs, NodeJS ,
                 WordPress , MySQL | MongoDB , API
