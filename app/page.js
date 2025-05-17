@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
@@ -9,7 +9,7 @@ import Projects from "./components/Projects";
 import Connect from "./components/Connect";
 import ProjectsM from "./components/Card/card";
 import Preloader from "./components/Preloader";
-
+import ToTopButton from "./components/ToTopButton";
 const fadeInVariants = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0 },
@@ -54,32 +54,28 @@ function Home() {
           <AnimatedSection delay={0.1}>
             <Hero />
           </AnimatedSection>
-
           {/* Projects Section */}
-          <div id="projects " className=" ">
+          <div id="projects" className=" ">
             <AnimatedSection delay={0.2}>
               <div className="hidden lg:block">
                 <Projects />
               </div>
-           
             </AnimatedSection>
           </div>
-          <div className="lg:hidden">
-                <ProjectsM />
-              </div>
+          <div id="projects" className="lg:hidden">
+            <ProjectsM />
+          </div>
           {/* About Section */}
           <div id="about">
-   
-              <About />
-        
+            <About />
           </div>
-
           {/* Connect Section */}
           <div id="connect">
-            <AnimatedSection delay={0.4}>
+            <AnimatedSection delay={0.3}>
               <Connect />
             </AnimatedSection>
           </div>
+          <ToTopButton />
         </>
       )}
     </>
