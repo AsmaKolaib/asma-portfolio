@@ -61,15 +61,15 @@ function Home() {
               <div className="hidden lg:block">
                 <Projects />
               </div>
-              <div className="lg:hidden">
-                <ProjectsM />
-              </div>
+           
             </AnimatedSection>
           </div>
-
+          <div className="lg:hidden">
+                <ProjectsM />
+              </div>
           {/* About Section */}
           <div id="about">
-            <AnimatedSection delay={0.3}>
+            <AnimatedSection delay={0.2}>
               <About />
             </AnimatedSection>
           </div>
