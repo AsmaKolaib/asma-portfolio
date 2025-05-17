@@ -4,7 +4,7 @@ import Link from "next/link";
 import Button from "../Button";
 const Connect = () => {
   return (
-    <div className="relative w-full h-screen flex items-center justify-center bg-black overflow-hidden  ">
+    <div className="relative w-full h-screen flex items-center justify-center bg-[#111112] overflow-hidden  ">
       <motion.div
         className="absolute w-[300px] h-[300px] rounded-full"
         initial={{ x: -50 }}
@@ -59,7 +59,7 @@ const Connect = () => {
               You
             </span>
           </motion.div>
-
+          <Button />
           <motion.div className="flex gap-2.5 justify-center items-center w-full mt-8"
           
           initial={{ opacity: 0, y: 50 }}
@@ -146,7 +146,7 @@ const Connect = () => {
           </motion.div>
         </div>
 
-        <Button />
+      
 
         <p className=" text-sm lg:text-base text-gray-500 text-center w-full mt-6 ">
           Copyright © {new Date().getFullYear()} asma

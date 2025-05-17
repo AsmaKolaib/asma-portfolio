@@ -32,13 +32,14 @@ body {
   background-position: left top, right top;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;*/
-  background-color: #000000;
+  background-color: #111112;
   color: var(--foreground);
   font-family: var(--font-poppins), Helvetica, sans-serif;
   scroll-behavior: smooth;
   overflow-y: auto;
   cursor: none;
   overflow-x: hidden;
+  color: white;
 }
 
 a {

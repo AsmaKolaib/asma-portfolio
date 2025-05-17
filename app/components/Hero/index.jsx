@@ -5,7 +5,7 @@ import Button from "../Button";
 
 const Hero = () => {
   return (
-    <div className="w-screen h-screen bg-black relative overflow-hidden">
+    <div className="w-screen h-screen bg-[#111112] relative overflow-hidden">
       <img
         src="/images/hero.gif"
         alt="3D blob"
@@ -16,7 +16,7 @@ const Hero = () => {
       />
 
       <motion.div
-        className="absolute border-2 border-[#252525] outline-[1000px] outline-[#0a0a0a] w-40 h-[16rem]  lg:w-96 lg:h-[28rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        className="absolute border-2 border-[#252525] outline-[1000px] outline-[#111112] w-40 h-[16rem] md:w-52 md:h-[18rem]  lg:w-96 lg:h-[28rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         initial={{ scale: 6 }}
         animate={{ scale: 1 }}
         transition={{
@@ -27,9 +27,10 @@ const Hero = () => {
         }}
       />
 
-      <div className="relative w-full h-screen flex flex-col items-center justify-around z-20">
-        <motion.div
-          className="flex flex-col justify-center items-center relative mt-50 ml-40  md:mt-50 lg:mt-20 lg:ml-80"
+      <div className="  container m-auto  relative w-full h-screen flex flex-col items-center justify-around z-20">
+      <div className="w-full  h-[40vh] grid  justify-center items-end content-end">
+      <motion.div
+          className=" h-full flex flex-col justify-center items-center relative  lg:mb-[23px] ml-40 lg:ml-90"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.8, duration: 0.8, ease: "easeOut" }}
@@ -72,9 +73,10 @@ const Hero = () => {
             }}
           />
         </motion.div>
+      </div>
 
         <motion.div
-          className="w-full text-center mt-[-92px] lg:mt-0"
+          className="h-[40vh] flex flex-col justify-center w-full text-center mt-[-92px] lg:mt-0"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.8, duration: 0.8, ease: "easeOut" }}
@@ -87,7 +89,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.8, duration: 0.6, ease: "easeOut" }}
-          className="justify-end"
+          className="h-[20vh] justify-end"
         >
           <Button />
         </motion.div>

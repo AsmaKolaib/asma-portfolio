@@ -69,9 +69,9 @@ function Home() {
               </div>
           {/* About Section */}
           <div id="about">
-            <AnimatedSection delay={0.2}>
+   
               <About />
-            </AnimatedSection>
+        
           </div>
 
           {/* Connect Section */}

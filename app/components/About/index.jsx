@@ -51,7 +51,7 @@ export default function About() {
 
   return (
     <>
-      <div className="About bg-[#111112] w-full  grid grid-cols-1  lg:grid-cols-2">
+      <div className="  About  bg-[#111112] w-full  grid grid-cols-1  lg:grid-cols-2">
         <div className=" right bg-[#111112] h-[50vh] lg:h-screen w-full flex flex-col justify-center overflow-hidden">
           <img
             src="/images/skills.gif"
@@ -69,7 +69,7 @@ export default function About() {
           <div className="lg:m-auto lg:w-[80%]">
             <div className="h-[50vh] lg:h-screen flex flex-col justify-center items-center p-8 lg:p-20 ">
               <p className="text-base lg:text-2xl">
-                <span className="text-lg lg:text-6xl font-bold">I am </span>a designer and
+                <span className="text-2xl lg:text-6xl font-bold">I am </span>a designer and
                 developer who is passionate about creating digital experiences.
                 I enjoy combining clean, efficient code with thoughtful,
                 user-centered design. I’m always looking for ways to improve my
@@ -82,7 +82,7 @@ export default function About() {
 
             <div className="h-[50vh] lg:h-screen flex flex-col justify-center items-center p-8 lg:p-20 ">
               <p className="text-base lg:text-2xl">
-                <span className="text-lg lg:text-6xl font-bold">Who </span>developed an
+                <span className="text-2xl lg:text-6xl font-bold">Who </span>developed an
                 extensive skills to help you and create awesome work together
                 and help you get the best outcome{" "}
               </p>
@@ -90,7 +90,7 @@ export default function About() {
 
             <div className="h-[50vh]  lg:h-screen flex flex-col justify-center items-center p-8 lg:p-20 ">
               <p className="text-base lg:text-2xl">
-                <span className="text-lg lg:text-6xl font-bold">Good </span>at designs - UI
+                <span className="text-2xl lg:text-6xl font-bold">Good </span>at designs - UI
                 design and design process and web for build an complete projects
                 - with HTML5 , CSS3 , JavaScript , Reacts , NextJs, NodeJS ,
                 WordPress , MySQL | MongoDB , API

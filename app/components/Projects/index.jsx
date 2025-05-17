@@ -102,7 +102,7 @@ const Projects = () => {
 
   return (
     <motion.div
-      className="overflow-hidden w-screen h-screen bg-black"
+        className="overflow-hidden w-screen h-screen bg-[#111112]"
       // whileTap={{ cursor: "grabbing" }}
     >
       <motion.div
@@ -134,7 +134,7 @@ const Projects = () => {
             className="flex flex-col  justify-center items-start text-left "
           >
             <h1 className="font-robuka text-9xl">projects</h1>
-            <p className="text-3xl leading-relaxed mt-4">
+            <p className="text-2xl leading-relaxed mt-4">
               I have worked on a number of recent <br />
               <span className="inline-flex items-center gap-4">
                 projects, including...
@@ -143,7 +143,7 @@ const Projects = () => {
                   alt="img"
                   width={100}
                   height={100}
-                  className="rounded-full w-[300px] h-[57px] object-cover"
+                  className="rounded-full w-[200px] h-[40px] object-cover"
                 />
               </span>
             </p>
